@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Xác định đường dẫn tuyệt đối tới file students.json
 DATA_FILE = os.path.join(os.path.dirname(__file__), 'data', 'students.json')
-
+# xin chao
 def read_students():
     if not os.path.exists(DATA_FILE):
         return []
@@ -72,8 +72,8 @@ def add_student():
 
     # Tự sinh id kế tiếp
     new_id = max([s.get('id', 0) for s in students], default=0) + 1
-
-    new_student = {
+    # Danh sách học sinh kế tiếp
+    new_student = {   
         "id": new_id,
         "mssv": str(data['mssv']),
         "ho_ten": str(data['ho_ten']),
