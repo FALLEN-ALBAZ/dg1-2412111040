@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>DG1 – Nguyễn Hải Long – 2412111040</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>DG1 – Nguyễn Hải Long – 2412111040</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>MSSV</th>
+                <th>Họ Tên</th>
+                <th>Lớp</th>
+                <th>Điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in students %}
+            <tr>
+                <td>{{ s.id }}</td>
+                <td>{{ s.mssv }}</td>
+                <td>{{ s.ho_ten }}</td>
+                <td>{{ s.lop }}</td>
+                <td>{{ s.diem }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
